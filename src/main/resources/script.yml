@@ -1,0 +1,17 @@
+#所有需要引入的类
+#不熟悉请勿改动
+
+#引擎默认已经引入了这个类
+#Tools: org.moxqeon.api.script.JavaScriptTools
+
+#Bukkit主类
+Bukkit: org.bukkit.Bukkit
+#一些ItemX内部类
+ItemManager: org.moxqeon.itemx.core.item.ItemManager
+ItemX: org.moxqeon.itemx.ItemX
+#一些工具类
+ListUtil: org.moxqeon.util.ListUtil
+StringUtil: org.moxqeon.util.StringUtil
+NBTItem: de.tr7zw.nbtapi.NBTItem
+NBTContainer: de.tr7zw.nbtapi.NBTContainer
+SlotType: org.moxqeon.bukkit.api.SlotType

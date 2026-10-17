@@ -1,0 +1,18 @@
+ExampleItem:
+  VanillaType: PAPER
+  ModelPath: item/example_item
+  DisplayName: "&fExampleItem"
+  Options:
+    ToolMaterial: iron
+    ToolType: pickaxe
+
+ExampleBlock:
+  VanillaType: PAPER
+  ModelPath: item/example_block
+  DisplayName: "&fExampleBlock"
+  Options:
+    Block:
+      Hardness: 5.0
+      Solid: true
+      DiggingLevel: 1
+      BestTool: PICKAXE

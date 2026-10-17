@@ -1,0 +1,22 @@
+#总选项
+General:
+  Version: 1.0.0
+  #使用Git来安放材质包
+  GitDeposit:
+    Enabled: false
+    #Git地址
+    GitAddress: "http://gitee.com/<user>/<repository>.git"
+    #Git用户名
+    UserName: ""
+    #Git地址
+    Password: ""
+    #邮箱地址，为保证身份一致
+    EmailAddress: ""
+  CompoundSplit: "!"
+
+#自定义方块选项
+CustomBlock:
+  #是否启用自定义方块功能，需要Paper
+  Enabled: false
+
+

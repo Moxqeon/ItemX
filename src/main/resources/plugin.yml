@@ -1,0 +1,11 @@
+name: ItemX
+version: '1.0.0'
+main: org.moxqeon.bukkit.item.ItemX
+api-version: 1.16
+authors: [ Kciyamat ]
+depend:
+  - MoxLib
+softdepend:
+  - MythicMobs
+  - Residence
+  - StateX
