@@ -55,7 +55,7 @@ open class CustomBlockType : ICustomBlockType {
     }
 
     open fun place(slotType: SlotType, against: Block, direction: BlockFace, consumer: Consumer<NBTCompound>): NBTCompound {
-        Preconditions.checkState(SlotType.HAND.contains(slotType))
+        Preconditions.checkArgument(SlotType.HAND.contains(slotType))
         val toBeReplaced = if (against.isSolid) against.getRelative(direction) else against
         if (isSolid && !toBeReplaced.isSolid) toBeReplaced.type = Material.BARRIER
         against.world.spawn(
