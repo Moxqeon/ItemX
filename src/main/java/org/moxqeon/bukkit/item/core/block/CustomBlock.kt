@@ -11,7 +11,6 @@ import org.moxqeon.bukkit.item.api.block.ICustomBlockType
 open class CustomBlock(val itemX: ItemX, nbtBlock: NBTBlock) : ICustomBlock {
     override val blockType: ICustomBlockType =
         itemX.blockManager.get(Constructor.namespacedKey(ItemX.NAMESPACE, nbtBlock.data.getString("BlockType")))
-    override val facing: BlockFace = BlockFace.valueOf(nbtBlock.data.getString("Facing"))
 
     companion object {
         @JvmStatic
