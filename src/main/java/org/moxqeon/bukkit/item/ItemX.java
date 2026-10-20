@@ -26,12 +26,12 @@ public final class ItemX extends JavaPlugin {
         instance = this;
         itemManager = new ItemManager(this);
         blockManager = new BlockManager(this);
-        diggingManager = new DiggingManager(this);
+//        diggingManager = new DiggingManager(this);
         consumableManager = new Consumable.ConsumableManager(itemManager);
         itemManager.generateDefaults();
         itemManager.importItems();
         itemManager.generateResourcePack();
-        diggingManager.start();
+//        diggingManager.start();
     }
 
     @Override
