@@ -1,4 +1,6 @@
 import java.net.URI
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
 
 plugins {
     java
@@ -18,16 +20,8 @@ repositories {
     }
     mavenCentral()
     maven {
-        name = "PaperMC"
-        url = uri("https://repo.papermc.io/repository/maven-public/")
-    }
-    maven {
         name = "CodeMC"
         url = URI("https://repo.codemc.io/repository/maven-public/")
-    }
-    maven {
-        name = "DMulloy"
-        url = URI("https://repo.dmulloy2.net/repository/public/")
     }
     maven {
         name = "Minebench"
@@ -37,9 +31,12 @@ repositories {
 
 dependencies {
     compileOnly("org.moxqeon:MoxLib:1.1.0")
-    compileOnly(fileTree(mapOf("dir" to "../../BukkitLib", "include" to "*.jar")))
+    compileOnly("com.google.guava:guava:33.2.0-jre")
+    compileOnly("com.google.code.gson:gson:2.10.1")
+    compileOnly("io.papermc:paper-api:1.20.4")
+    compileOnly("io.papermc:paper-core:1.20.4")
+//    compileOnly(fileTree(mapOf("dir" to "../../BukkitLib", "include" to "*.jar")))
     compileOnly("com.github.retrooper:packetevents-spigot:2.13.0")
-    compileOnly("com.github.retrooper:packetevents-bungeecord:2.13.0")
     compileOnly(kotlin("stdlib-jdk8"))
 }
 
@@ -57,6 +54,15 @@ tasks {
     }
     compileJava {
         options.encoding = "UTF-8"
+    }
+    jar{
+        doLast {
+            val jarFile = this@jar.archiveFile.get().asFile
+            val dir = File("C:\\Users\\Kciyamat\\Desktop\\Purpur\\plugins")
+            val dest = File(dir, "${jarFile.name}")
+            dir.mkdirs()
+            Files.copy(jarFile.toPath(), dest.toPath(), StandardCopyOption.REPLACE_EXISTING)
+        }
     }
 }
 
