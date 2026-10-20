@@ -7,7 +7,6 @@ import org.bukkit.inventory.InventoryHolder
 
 
 interface IInventoryBlock : IInteractableBlock, InventoryHolder {
-    val inventory: Inventory
 
     override fun interact(player: Player, action: Action): Boolean {
         if (action != Action.RIGHT_CLICK_BLOCK) return false
