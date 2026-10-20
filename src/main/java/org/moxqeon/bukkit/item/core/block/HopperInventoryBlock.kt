@@ -13,7 +13,5 @@ import org.moxqeon.bukkit.item.api.block.IInventoryBlock
 class HopperInventoryBlock(itemX: ItemX, nbtBlock: NBTBlock) : CustomInventoryBlock(itemX, nbtBlock) {
     override val blockType: ICustomBlockType
         get() = TODO("Not yet implemented")
-    override val facing: BlockFace
-        get() = TODO("Not yet implemented")
 
 }
